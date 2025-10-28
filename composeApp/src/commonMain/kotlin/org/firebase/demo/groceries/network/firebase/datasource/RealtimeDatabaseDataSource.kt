@@ -1,7 +1,6 @@
-package org.firebase.demo.groceries.network.firebase
+package org.firebase.demo.groceries.network.firebase.datasource
 
 import dev.gitlive.firebase.Firebase
-import dev.gitlive.firebase.database.DataSnapshot
 import dev.gitlive.firebase.database.database
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

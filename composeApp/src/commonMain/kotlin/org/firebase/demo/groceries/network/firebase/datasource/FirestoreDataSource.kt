@@ -1,4 +1,4 @@
-package org.firebase.demo.groceries.network.firebase
+package org.firebase.demo.groceries.network.firebase.datasource
 
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.firestore.firestore

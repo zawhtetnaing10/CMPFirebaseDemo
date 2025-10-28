@@ -19,10 +19,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import cmpfirebasedemo.composeapp.generated.resources.Res
 import cmpfirebasedemo.composeapp.generated.resources.compose_multiplatform
 import kotlinx.coroutines.flow.collectLatest
-import org.firebase.demo.core.utils.universalJsonParser
-import org.firebase.demo.groceries.data.GroceryVO
-import org.firebase.demo.groceries.network.firebase.FirestoreDataSource
-import org.firebase.demo.groceries.network.firebase.RealtimeDatabaseDataSource
+import org.firebase.demo.groceries.network.firebase.authentication.Authentication
+import org.firebase.demo.groceries.network.firebase.datasource.FirestoreDataSource
 
 @Composable
 @Preview
@@ -34,10 +32,19 @@ fun App() {
 //                println("Grocery items ====> $it")
 //            }
 
-        FirestoreDataSource.getGroceries()
-            .collectLatest {
-                println("Grocery items ====> $it")
-            }
+//        FirestoreDataSource.getGroceries()
+//            .collectLatest {
+//                println("Grocery items ====> $it")
+//            }
+
+        // Try registering
+        //Authentication.register("zawgyi.gog@gmail.com", "zawhtetnaing1992")
+
+        // Try Logging in
+        //Authentication.login("zawgyi.gog@gmail.com", "zawhtetnaing1992")
+
+        // Check if logged in
+        Authentication.isLoggedIn()
     }
 
     MaterialTheme {
