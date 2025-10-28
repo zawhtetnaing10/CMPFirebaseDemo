@@ -1,4 +1,4 @@
-package org.firebase.demo.groceries.network.firebase.authentication
+package org.firebase.demo.core.firebase.authentication
 
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.auth

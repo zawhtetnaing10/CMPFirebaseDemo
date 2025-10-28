@@ -18,9 +18,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import cmpfirebasedemo.composeapp.generated.resources.Res
 import cmpfirebasedemo.composeapp.generated.resources.compose_multiplatform
-import kotlinx.coroutines.flow.collectLatest
-import org.firebase.demo.groceries.network.firebase.authentication.Authentication
-import org.firebase.demo.groceries.network.firebase.datasource.FirestoreDataSource
+import org.firebase.demo.core.firebase.analytics.Analytics
+import org.firebase.demo.core.firebase.authentication.Authentication
+import org.firebase.demo.core.utils.universalJsonParser
 
 @Composable
 @Preview
@@ -44,7 +44,9 @@ fun App() {
         //Authentication.login("zawgyi.gog@gmail.com", "zawhtetnaing1992")
 
         // Check if logged in
-        Authentication.isLoggedIn()
+        //Authentication.isLoggedIn()
+
+        Analytics.logEvent("userloggedIn", "zawgyi.gog@gmail.com")
     }
 
     MaterialTheme {
