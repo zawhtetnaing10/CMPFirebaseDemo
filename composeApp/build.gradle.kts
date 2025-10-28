@@ -9,6 +9,7 @@ plugins {
 
     alias(libs.plugins.jetbrains.kotlin.serialization)
     id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 kotlin {
@@ -49,6 +50,7 @@ kotlin {
             implementation("dev.gitlive:firebase-firestore:2.3.0")
             implementation("dev.gitlive:firebase-auth:2.3.0")
             implementation("dev.gitlive:firebase-analytics:2.3.0")
+            implementation("dev.gitlive:firebase-crashlytics:2.3.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

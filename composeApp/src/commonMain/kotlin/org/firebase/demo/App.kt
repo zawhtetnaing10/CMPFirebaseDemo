@@ -46,7 +46,7 @@ fun App() {
         // Check if logged in
         //Authentication.isLoggedIn()
 
-        Analytics.logEvent("userloggedIn", "zawgyi.gog@gmail.com")
+        //Analytics.logEvent("userloggedIn", "zawgyi.gog@gmail.com")
     }
 
     MaterialTheme {
@@ -58,7 +58,11 @@ fun App() {
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Button(onClick = { showContent = !showContent }) {
+            Button(onClick = {
+//                showContent = !showContent
+
+                throw RuntimeException("Test Crash")
+            }) {
                 Text("Click me!")
             }
             AnimatedVisibility(showContent) {
