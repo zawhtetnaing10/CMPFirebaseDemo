@@ -21,6 +21,7 @@ import cmpfirebasedemo.composeapp.generated.resources.compose_multiplatform
 import kotlinx.coroutines.flow.collectLatest
 import org.firebase.demo.core.utils.universalJsonParser
 import org.firebase.demo.groceries.data.GroceryVO
+import org.firebase.demo.groceries.network.firebase.FirestoreDataSource
 import org.firebase.demo.groceries.network.firebase.RealtimeDatabaseDataSource
 
 @Composable
@@ -28,10 +29,14 @@ import org.firebase.demo.groceries.network.firebase.RealtimeDatabaseDataSource
 fun App() {
 
     LaunchedEffect(Unit) {
-        RealtimeDatabaseDataSource.getGroceries()
+//        RealtimeDatabaseDataSource.getGroceries()
+//            .collectLatest {
+//                println("Grocery items ====> $it")
+//            }
+
+        FirestoreDataSource.getGroceries()
             .collectLatest {
-                val groceries = it.value<Map<String, GroceryVO>>()
-                println("Grocery items ====> ${groceries.values}")
+                println("Grocery items ====> $it")
             }
     }
 
