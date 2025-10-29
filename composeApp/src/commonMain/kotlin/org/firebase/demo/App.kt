@@ -18,9 +18,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import cmpfirebasedemo.composeapp.generated.resources.Res
 import cmpfirebasedemo.composeapp.generated.resources.compose_multiplatform
-import org.firebase.demo.core.firebase.analytics.Analytics
-import org.firebase.demo.core.firebase.authentication.Authentication
-import org.firebase.demo.core.utils.universalJsonParser
+import org.firebase.demo.groceries.network.firebase.datasource.FirebaseInstallations
+import org.firebase.demo.groceries.network.firebase.datasource.RemoteConfig
 
 @Composable
 @Preview
@@ -47,6 +46,13 @@ fun App() {
         //Authentication.isLoggedIn()
 
         //Analytics.logEvent("userloggedIn", "zawgyi.gog@gmail.com")
+
+        // Remote Config
+//        RemoteConfig.fetchAndActivate()
+//        println("Current View Type =====> ${RemoteConfig.getViewType()}")
+
+        // Installations
+        FirebaseInstallations.getInstallationsId()
     }
 
     MaterialTheme {

@@ -51,6 +51,8 @@ kotlin {
             implementation("dev.gitlive:firebase-auth:2.3.0")
             implementation("dev.gitlive:firebase-analytics:2.3.0")
             implementation("dev.gitlive:firebase-crashlytics:2.3.0")
+            implementation("dev.gitlive:firebase-config:2.3.0")
+            implementation("dev.gitlive:firebase-installations:2.3.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
